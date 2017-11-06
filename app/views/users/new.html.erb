@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+    </title>
+
+  </head>
+  <body>
+    <div class="text-center">
+      <h1> Create an Account </h1>
+    </div>
+    <div class="container">
+       <div class="row">
+      <div class="col text-center">
+          <%= image_tag("pig.jpg", class: "d-block w-50 img-fluid") %>
+      </div>
+
+    <div class="card text-center" style="width: 20rem; margin: auto;">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+           <%= form_for(@user) do |f| %>
+            <p><%= f.label :first_name, "First Name:" %>
+            <%= f.text_field :first_name %></p><br/>
+
+            <p><%= f.label :last_name, "Last Name:" %>
+            <%= f.text_field :last_name %></p><br/>
+
+            <%= f.label :email, "Email:" %>
+            <%= f.text_field :email %><br/>
+
+            <%= f.label :phone, "Phone:" %>
+            <%= f.text_field :phone %><br/>
+
+            <%= f.label :password, "Password:" %>
+            <%= f.password_field :password %><br/>
+
+            <%= f.submit %>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+      </div>
+    </div>
+  </body>
+</html>
