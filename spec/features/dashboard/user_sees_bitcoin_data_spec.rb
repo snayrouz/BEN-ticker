@@ -2,7 +2,7 @@ require 'rails_helper'
 describe "User Sees Daily Bitcoin Data" do
   it "views Bitcoin data" do
     #create a User
-    
+
     visit 'dashboard_index_path'
 
     expect(response).to be_success
