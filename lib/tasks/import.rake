@@ -3,7 +3,7 @@ require 'csv'
 desc "Import data from csv file"
 task :import => [:environment] do
 
-   merchants = "./db/data/bitcoin_cash_price.csv"
+   bitcoin = "./db/data/bitcoin_cash_price.csv"
 
   CSV.foreach(bitcoin, :headers => :true) do |row|
     b = Bitcoin.new
@@ -17,9 +17,9 @@ task :import => [:environment] do
     b.save!
   end
 
-   customers = "./db/data/ethereum_classic_price.csv"
+   ethereum = "./db/data/ethereum_classic_price.csv"
 
-  CSV.foreach(erthereum, :headers => :true) do |row|
+  CSV.foreach(ethereum, :headers => :true) do |row|
      e = Ethereum.new
      e.date = row['Date']
      e.open = row['Open']
