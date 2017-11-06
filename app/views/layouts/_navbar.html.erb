@@ -11,7 +11,7 @@
            <li><%= link_to "Welcome, #{current_user.name}", root_path %></li>
            <li><%= link_to 'Logout', logout_path, method: :delete %></li>
          <% else %>
-           <li><%= link_to 'Login with Coinbase', coinbase_login_path %></li>
+           <li><%= link_to 'Login with Twitter', twitter_login_path %></li>
          <% end %>
        </ul>
      </div>
