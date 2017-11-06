@@ -42,7 +42,6 @@ gem 'groupdate'
 # gem 'coinbase-ruby'
 gem 'bootstrap-sass'
 gem 'active_model_serializers'
-gem 'devise'
 
 
 
