@@ -14,6 +14,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session.clear
+    flash[:notice] = "You have logged out!"
     redirect_to root_path
   end
 
@@ -23,7 +24,7 @@ class SessionsController < ApplicationController
     if @user && @user.authenticate(params[:session][:password])
       login_successful
     else
-      flash[:failure] = "That login was unsuccessful"
+      flash[:failure] = "Hmm... try that again."
       redirect_to root_path
     end
   end
