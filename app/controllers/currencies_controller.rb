@@ -1,3 +1,5 @@
+require "#{Rails.root}/lib/currencies/currency_client.rb"
+
 class Currenciesontroller < ApplicationController
   def show
     @currencies = params[:id] ? params[:id].downcase : ''
