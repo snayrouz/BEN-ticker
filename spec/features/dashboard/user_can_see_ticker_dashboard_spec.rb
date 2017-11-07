@@ -2,7 +2,7 @@ require "rails_helper"
 
 feature "User views graph buttons" do
   scenario "successfully" do
-    visit root_path
+    visit currency_path
     expect(page).to have_link("Bitcoin")
     expect(page).to have_link("Ethereum")
     expect(page).to have_link("Nasdaq")
