@@ -26,14 +26,17 @@
             <p><%= f.label :last_name, "Last Name:" %>
             <%= f.text_field :last_name %></p><br/>
 
-            <%= f.label :email, "Email:" %>
-            <%= f.text_field :email %><br/>
+            <p><%= f.label :username, "Username:" %>
+            <%= f.text_field :username %></p><br/>
 
-            <%= f.label :phone, "Phone:" %>
-            <%= f.text_field :phone %><br/>
+            <p><%= f.label :email, "Email:" %>
+            <%= f.text_field :email %></p><br/>
 
-            <%= f.label :password, "Password:" %>
-            <%= f.password_field :password %><br/>
+            <p><%= f.label :phone, "Phone:" %>
+            <%= f.telephone_field :phone, placeholder: 'xxx-xxx-xxxx' %></p><br/>
+
+            <p><%= f.label :password, "Password:" %>
+            <%= f.password_field :password %></p><br/>
 
             <%= f.submit %>
           <% end %>

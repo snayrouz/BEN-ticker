@@ -30,7 +30,8 @@ gem 'jquery-rails'
 gem 'rack-canonical-host'
 gem 'rest-client'
 gem 'httparty'
-
+gem 'twilio-ruby' # for interacting with twilio
+gem 'envyable' # for managing environment variables
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
