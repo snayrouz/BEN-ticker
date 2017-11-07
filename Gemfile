@@ -28,6 +28,7 @@ gem 'delayed_job_active_record'
 gem 'flutie'
 gem 'jquery-rails'
 gem 'rack-canonical-host'
+gem 'rest-client'
 
 
 group :development, :test do
