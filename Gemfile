@@ -29,7 +29,7 @@ gem 'flutie'
 gem 'jquery-rails'
 gem 'rack-canonical-host'
 gem 'rest-client'
-
+gem 'httparty'
 
 
 group :development, :test do
