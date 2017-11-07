@@ -7,7 +7,7 @@ describe "User Logs In" do
     click_link "Login"
 
     expect(response).to be_success
-    expect(currency_path).to be(dashboard_path)
+    expect(currency_path).to be(currencies_path)
     expect(page).to have_content("BEN ticker")
     expect(page).to have_link("Logout")
   end
