@@ -88,6 +88,7 @@ GEM
     ffi (1.9.18)
     figaro (1.1.1)
       thor (~> 0.14)
+    flutie (2.0.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     groupdate (3.2.0)
@@ -248,6 +249,7 @@ DEPENDENCIES
   delayed_job_active_record
   faraday
   figaro
+  flutie
   groupdate
   jbuilder (~> 2.5)
   launchy

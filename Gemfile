@@ -25,6 +25,7 @@ gem 'groupdate'
 gem 'bootstrap-sass'
 gem 'active_model_serializers'
 gem 'delayed_job_active_record'
+gem "flutie"
 
 
 group :development, :test do
