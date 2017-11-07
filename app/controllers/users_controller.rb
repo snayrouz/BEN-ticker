@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       session[:logged_in?] = true
-      redirect_to dashboard_path
+      redirect_to currencies_path
     else
       redirect_to login_path
     end
@@ -25,10 +25,10 @@ class UsersController < ApplicationController
   def update
     if current_user.save
       current_user.update(user_params)
-      redirect_to dashboard_path
+      redirect_to currencies_path
     elsif current_user.save
       current_user.update(user_params)
-      redirect_to dashboard_path
+      redirect_to currencies_path
     else
       render :edit
     end

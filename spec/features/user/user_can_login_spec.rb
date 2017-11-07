@@ -4,10 +4,11 @@ describe "User Logs In" do
   it "can login from the home page" do
     visit '/'
 
-    click_link "Login with Twitter"
+    click_link "Login"
 
     expect(response).to be_success
-    expect(page).to have_content("Profile Page")
+    expect(currency_path).to be(currencies_path)
+    expect(page).to have_content("BEN ticker")
     expect(page).to have_link("Logout")
   end
 end

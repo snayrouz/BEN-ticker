@@ -1,8 +1,8 @@
 require "rails_helper"
 
-feature "User views dashboard show page" do
+feature "User views currencies show page" do
   scenario "successfully sees ticker" do
-    visit dashboard_path
+    visit currencies_path
     expect(page).to have_headline_text
   end
 

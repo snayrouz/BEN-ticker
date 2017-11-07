@@ -14,7 +14,7 @@ class PasswordsController < ApplicationController
     if user && user.verification_code == params[:password][:verification_code]
       user.update(password_params)
       session[:user_id] = user.id
-      redirect_to dashboard_index_path
+      redirect_to currencies_index_path
     else
       redirect_to new_password_path
     end
