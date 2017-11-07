@@ -13,8 +13,8 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create, :edit, :update]
 
-  resources "dashboard#show", id: "bitcoin"
-  
+  resources :dashboard, only: :show, id: "bitcoin"
+
   namespace :api do
     namespace :v1 do
       namespace :bitcoin do
