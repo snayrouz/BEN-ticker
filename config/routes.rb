@@ -15,10 +15,9 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create, :edit, :update]
 
-  resources :currencies, only: :show, id: "bitcoin"
+  resources :currencies, only: [:show], id: "bitcoin"
 
-  resources :bitcoin, only: [:index]
-  
+
 
 
 

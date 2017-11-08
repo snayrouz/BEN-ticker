@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171107182420) do
+ActiveRecord::Schema.define(version: 20171108171237) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bitcoins", force: :cascade do |t|
-    t.datetime "date"
+    t.string "date"
     t.decimal "open"
     t.decimal "high"
     t.decimal "low"
