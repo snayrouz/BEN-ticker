@@ -22,8 +22,6 @@ puts "Users seeded"
     b.high = row['High']
     b.low = row['Low']
     b.close = row['Close']
-    b.volume = row['Volume']
-    b.market_cap = row['Market Cap']
     b.save!
   end
 
@@ -36,8 +34,6 @@ puts "Users seeded"
      e.high = row['High']
      e.low = row['Low']
      e.close = row['Close']
-     e.volume = row['Volume']
-     e.market_cap = row['Market Cap']
      e.save!
   end
 
