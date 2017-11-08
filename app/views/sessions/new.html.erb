@@ -14,15 +14,16 @@
 
   </head>
   <body>
-    <div class="card text-center" style="width: 20rem; margin: auto;">
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">
+    <div class="container">
+      <div class="card card-login mx-auto mt-5">
+        <div class="card-header">Login</div>
+          <div class="card-body">
           <%= form_for(:session, url: login_path) do |f| %>
             <p><%= f.label :username, "Username:" %>
             <%= f.text_field :username %></p><br/>
             <p><%= f.label :password, "Password:" %>
             <%= f.password_field :password %></p><br/>
-            <%= f.submit "Login", class: 'btn btn-success' %>
+            <%= f.submit "Login", class: 'btn btn-outline-success' %>
           <% end %>
         </li>
       </ul>
@@ -31,5 +32,8 @@
         <%= link_to "(Forgot My Password)", password_reset_path %>
       </div>
     </div>
+  </div>
+</div>
+
   </body>
 </html>
