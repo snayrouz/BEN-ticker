@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   namespace :bitcoin do
     resources :average_open, only: [:index]
     resources :average_high, only: [:index]
+    resources :average_low, only: [:index]
   end
 
 
