@@ -18,10 +18,27 @@ Rails.application.routes.draw do
   resources :currencies, only: [:show], id: "bitcoin"
   resources :bitcoin, only: [:index]
 
-  namespace :bitcoin do
-    resources :average_open, only: [:index]
-    resources :average_high, only: [:index]
-    resources :average_low, only: [:index]
+  namespace :charts do
+    namespace :bitcoin do
+      get "avg_btc_open_monthly"
+      get "avg_btc_open_yearly"
+      get "avg_btc_high_monthly"
+      get "avg_btc_high_yearly"
+      get "avg_btc_low_monthly"
+      get "avg_btc_low_yearly"
+      get "avg_btc_close_monthly"
+      get "avg_btc_close_yearly"
+    end
+    namespace :ethereum do
+      get "avg_eth_open_monthly"
+      get "avg_eth_open_yearly"
+      get "avg_eth_high_monthly"
+      get "avg_eth_high_yearly"
+      get "avg_eth_low_monthly"
+      get "avg_eth_low_yearly"
+      get "avg_eth_close_monthly"
+      get "avg_eth_close_yearly"
+    end
   end
 
 
