@@ -1,5 +1,5 @@
 class TokensController < ApplicationController
-  before_filter :authenticate!
+  before_action :authenticate!
 
   def get_token
     Twilio::Util::AccessToken.new(

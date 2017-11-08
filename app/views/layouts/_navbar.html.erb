@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-dark bg-dark">
   <h1 class="navbar-brand mb-0">BEN ticker</h1>
   <div class="container">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,8 +14,6 @@
            <li><%= link_to 'Nasdaq', currency_path('Nasdaq') %></li>
            <li><%= link_to "Welcome, #{current_user.first_name}", root_path %></li>
            <li><%= link_to 'Logout', logout_path, method: :delete %></li>
-         <% else %>
-           <li><%= link_to 'Login', login_path %></li>
          <% end %>
        </ul>
      </div>

@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       session[:logged_in?] = true
-      redirect_to currency_path
+      redirect_to currency_path([:Bitcoin])
     else
       redirect_to login_path
     end
