@@ -12,6 +12,7 @@ class CurrenciesController < ApplicationController
     end
   end
 
+
     private
 
       def set_currencies(currency_type)

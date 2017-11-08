@@ -13,7 +13,7 @@ user_4 = User.create(first_name: "Joe", last_name: "Teno", username: "jteno", em
 user_5 = User.create(first_name: "Richard", last_name: "Dixon", username: "rdixon", email: "richard@richard.com", password: "richard123", phone: "+13033333333")
 puts "Users seeded"
 
-csv_text = File.read(Rails.root.join('lib', 'seeds', 'bitcoin_cash_price.csv'))
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'bitcoin_price.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|
   b = Bitcoin.new
@@ -28,7 +28,7 @@ csv.each do |row|
 end
 puts "There are now #{Bitcoin.count} rows in the bitcoins table"
 
-csv_text = File.read(Rails.root.join('lib', 'seeds', 'ethereum_classic_price.csv'))
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'ethereum_price.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|
   e = Ethereum.new

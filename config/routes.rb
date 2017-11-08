@@ -15,20 +15,33 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create, :edit, :update]
 
-  resources :currencies, only: :show, id: "bitcoin"
+  resources :currencies, only: [:show], id: "bitcoin"
+  resources :bitcoin, only: [:index]
+  resources :ethereum, only: [:index]
 
-  namespace :api do
-    namespace :v1 do
-      namespace :bitcoin do
-        get "/month_controller", to: "month_controller#show"
-        get "/week_controller", to: "week_controller#show"
-      end
-      namespace :etherium do
-        get "/month_controller", to: "month_controller#show"
-        get "/week_controller", to: "week_controller#show"
-      end
+  namespace :charts do
+    namespace :bitcoin do
+      get "avg_btc_open_monthly"
+      get "avg_btc_open_yearly"
+      get "avg_btc_high_monthly"
+      get "avg_btc_high_yearly"
+      get "avg_btc_low_monthly"
+      get "avg_btc_low_yearly"
+      get "avg_btc_close_monthly"
+      get "avg_btc_close_yearly"
+    end
+    namespace :ethereum do
+      get "avg_eth_open_monthly"
+      get "avg_eth_open_yearly"
+      get "avg_eth_high_monthly"
+      get "avg_eth_high_yearly"
+      get "avg_eth_low_monthly"
+      get "avg_eth_low_yearly"
+      get "avg_eth_close_monthly"
+      get "avg_eth_close_yearly"
     end
   end
+
 
 
 
