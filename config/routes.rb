@@ -17,7 +17,17 @@ Rails.application.routes.draw do
 
   resources :currencies, only: [:show], id: "bitcoin"
 
+  namespace :api do
+    namespace :v1 do
+      namespace :bitcoin do
+        get "/avg_btc_close_month", to: "avg_btc_close_month#show"
+      end
 
+      namespace :ethereum do
+        get "/avg_eth_close_month", to: "avg_eth_close_month#show"
+      end
+    end
+  end
 
 
 
