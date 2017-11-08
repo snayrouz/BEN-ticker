@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   resources :currencies, only: [:show], id: "bitcoin"
   resources :bitcoin, only: [:index]
+  resources :ethereum, only: [:index]
 
   namespace :charts do
     namespace :bitcoin do
