@@ -17,18 +17,8 @@ Rails.application.routes.draw do
 
   resources :currencies, only: :show, id: "bitcoin"
 
-  namespace :api do
-    namespace :v1 do
-      namespace :bitcoin do
-        get "/month_controller", to: "month_controller#show"
-        get "/week_controller", to: "week_controller#show"
-      end
-      namespace :etherium do
-        get "/month_controller", to: "month_controller#show"
-        get "/week_controller", to: "week_controller#show"
-      end
-    end
-  end
+  resources :bitcoin, only: [:index]
+  
 
 
 

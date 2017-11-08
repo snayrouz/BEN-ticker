@@ -1,7 +1,10 @@
 class Ethereum < ApplicationRecord
-  def self.sort_by_month
-  end
+  validates :date,
+            :open,
+            :high,
+            :low,
+            :close,
+            :volume,
+            presence: true
 
-  def self.sort_by_week
-  end
 end

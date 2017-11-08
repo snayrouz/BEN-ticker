@@ -1,10 +1,11 @@
 class Bitcoin < ApplicationRecord
-
-  def self.sort_by_month
-  end
-
-  def self.sort_by_week
-  end
+  validates :date,
+            :open,
+            :high,
+            :low,
+            :close,
+            :volume,
+            presence: true
 
 
 end
