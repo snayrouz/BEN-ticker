@@ -1,10 +1,13 @@
 class SessionsController < ApplicationController
   def new
+    @user = User.new
   end
 
   def create
-    if params[:provider].present?
-      @user = User.from_omniauth(request.env['omniauth.auth'])
+    @user = User.find_by(username: params[:session][:username])
+    if @user && @user.authenticate(params[:session][:password])
+      session[:user_id] = @user.id
+      session[:logged_in?] = true
       login_successful
     else
       @user = User.find_by(email: params[:session][:email])
@@ -32,7 +35,7 @@ class SessionsController < ApplicationController
   def login_successful
     session[:user_id] = @user.id
     flash[:notice] = "Logged in as #{@user.first_name} #{@user.last_name}"
-    redirect_to currencies_index_path
+    redirect_to currency_path([:Bitcoin])
   end
 
 
