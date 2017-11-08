@@ -4,7 +4,6 @@ class Ethereum < ApplicationRecord
             :high,
             :low,
             :close,
-            :volume,
             presence: true
 
   def self.average_yearly_open
@@ -21,7 +20,7 @@ class Ethereum < ApplicationRecord
     group_by_year(:date)
     .average(:high)
   end
-  
+
   def self.average_monthly_high
     group_by_month(:date)
     .average(:high)

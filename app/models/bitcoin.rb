@@ -4,7 +4,6 @@ class Bitcoin < ApplicationRecord
             :high,
             :low,
             :close,
-            :volume,
             presence: true
 
   def self.average_yearly_open
