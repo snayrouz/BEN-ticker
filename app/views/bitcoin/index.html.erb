@@ -4,33 +4,33 @@
   <hr>
   <% cache(charts_bitcoin_avg_btc_open_monthly_path, expires_in: 6.hours) do %>
   <h3>Average Open Price By Month</h3>
-    <%= column_chart charts_bitcoin_avg_btc_open_monthly_path %>
+    <%= column_chart charts_bitcoin_avg_btc_open_monthly_path, refresh: 60 %>
     <% end %>
   <hr>
   <h3>Average Open Price By Year</h3>
-    <%= line_chart charts_bitcoin_avg_btc_open_yearly_path %>
+    <%= line_chart charts_bitcoin_avg_btc_open_yearly_path, refresh: 60 %>
   <hr>
   <% cache(charts_bitcoin_avg_btc_high_monthly_path, expires_in: 6.hours) do %>
   <h3>Average High Price By Month</h3>
-    <%= column_chart charts_bitcoin_avg_btc_high_monthly_path %>
+    <%= column_chart charts_bitcoin_avg_btc_high_monthly_path, refresh: 60 %>
     <% end %>
   <hr>
   <h3>Average High Price By Year</h3>
-    <%= line_chart charts_bitcoin_avg_btc_high_yearly_path %>
+    <%= line_chart charts_bitcoin_avg_btc_high_yearly_path, refresh: 60 %>
   <hr>
   <% cache(charts_bitcoin_avg_btc_low_monthly_path, expires_in: 6.hours) do %>
   <h3>Average Low Price By Month</h3>
-    <%= column_chart charts_bitcoin_avg_btc_low_monthly_path %>
+    <%= column_chart charts_bitcoin_avg_btc_low_monthly_path, refresh: 60 %>
     <% end %>
   <hr>
   <h3>Average Low Price By Year</h3>
-    <%= line_chart charts_bitcoin_avg_btc_low_yearly_path %>
+    <%= line_chart charts_bitcoin_avg_btc_low_yearly_path, refresh: 60 %>
   <hr>
   <% cache(charts_bitcoin_avg_btc_close_monthly_path, expires_in: 6.hours) do %>
   <h3>Average Closing Price By Month</h3>
-    <%= column_chart charts_bitcoin_avg_btc_close_monthly_path %>
+    <%= column_chart charts_bitcoin_avg_btc_close_monthly_path, refresh: 60 %>
     <% end %>
   <hr>
   <h3>Average Closing Price By Year</h3>
-    <%= line_chart charts_bitcoin_avg_btc_close_yearly_path %>
+    <%= line_chart charts_bitcoin_avg_btc_close_yearly_path, refresh: 60 %>
 </div>
