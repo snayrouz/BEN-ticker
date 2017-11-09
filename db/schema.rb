@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171108220523) do
+ActiveRecord::Schema.define(version: 20171109123426) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 20171108220523) do
   end
 
   create_table "ethereums", force: :cascade do |t|
-    t.datetime "date"
+    t.string "date"
     t.decimal "open"
     t.decimal "high"
     t.decimal "low"
@@ -68,6 +68,7 @@ ActiveRecord::Schema.define(version: 20171108220523) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "username"
+    t.string "password"
   end
 
 end

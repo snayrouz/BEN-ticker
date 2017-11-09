@@ -2,8 +2,8 @@ require 'rails_helper'
 
 feature "User Can Reset Password" do
   it "resets their password" do
-    user = create(:user, email: "josh@example.com", verification_code: "123")
-    allow(CodeGenerator).to receive(:generate).and_return("456")
+    user = User.create(first_name: "Sam", last_name: "Nayrouz", username: "snayrouz", email: "sam@sam.com", password: "sam123", phone: "+13864511696", verification_code: "123456")
+    allow(CodeGenerator).to receive(:generate).and_return("123456")
     allow(MessageSender).to receive(:send_code).and_return(true)
     visit "/login"
     click_on "Forgot My Password"
@@ -17,7 +17,7 @@ feature "User Can Reset Password" do
     expect(page).to have_content "Verification Code"
     expect(page).to have_content "New Password"
 
-    fill_in "Verification Code", with: "456432"
+    fill_in "Verification Code", with: "123456"
     fill_in 'New Password', with: "password"
     fill_in 'Confirm Password', with: "password"
     click_on "Submit"

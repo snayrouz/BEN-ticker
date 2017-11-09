@@ -17,44 +17,45 @@
         <% end %>
           <%= area_chart @currencies, refresh: 60 %><br>
           <hr>
-          <h3>Bitcoin Pricing Updates from Twitter</h3>
-          <hr>
-          <ul>
-            <% cache('btc_price_tweet', expires_in: 6.hours) do %>
-              <% TwitterApi.btc_price_tweet.each do |tweet| %>
-                <li><%= tweet.text %></li>
+          <div class="container twitter" id="twitter">
+            <h3 class="twitter-headline">Bitcoin Pricing Updates from Twitter</h3>
+            <hr>
+            <ul>
+              <% cache('btc_price_tweet', expires_in: 6.hours) do %>
+                <% TwitterApi.btc_price_tweet.each do |tweet| %>
+                  <li><%= tweet.text %></li>
+                <% end %>
               <% end %>
-            <% end %>
-          </ul>
-          <h3>Bitcoin News from Twitter</h3>
-          <hr>
-          <ul>
-            <% cache('btc_news', expires_in: 30.minutes) do %>
-              <% TwitterApi.btc_news.each do |tweet| %>
-                <li><%= tweet.text %></li>
+            </ul>
+            <h3 class="twitter-headline">Bitcoin News from Twitter</h3>
+            <hr>
+            <ul>
+              <% cache('btc_news', expires_in: 30.minutes) do %>
+                <% TwitterApi.btc_news.each do |tweet| %>
+                  <li><%= tweet.text %></li>
+                <% end %>
               <% end %>
-            <% end %>
-          </ul>
-          <h3>Ethereum Pricing Updates from Twitter</h3>
-          <hr>
-          <ul>
-            <% cache('eth_price_tweet', expires_in: 3.hours) do %>
-              <% TwitterApi.eth_price_tweet.each do |tweet| %>
-                <li><%= tweet.text %></li>
+            </ul>
+            <h3 class="twitter-headline">Ethereum Pricing Updates from Twitter</h3>
+            <hr>
+            <ul>
+              <% cache('eth_price_tweet', expires_in: 3.hours) do %>
+                <% TwitterApi.eth_price_tweet.each do |tweet| %>
+                  <li><%= tweet.text %></li>
+                <% end %>
               <% end %>
-            <% end %>
-          </ul>
-          <h3>Ethereum News from Twitter</h3>
-          <hr>
-          <ul>
-            <% cache('eth_news', expires_in: 30.minutes) do %>
-              <% TwitterApi.eth_news.each do |tweet| %>
-                <li><%= tweet.text %></li>
+            </ul>
+            <h3 class="twitter-headline">Ethereum News from Twitter</h3>
+            <hr>
+            <ul>
+              <% cache('eth_news', expires_in: 30.minutes) do %>
+                <% TwitterApi.eth_news.each do |tweet| %>
+                  <li><%= tweet.text %></li>
+                <% end %>
               <% end %>
-            <% end %>
-          </ul>
-
-
+            </ul>
+          </div>
+          <hr>
       <div class="container-fluid">
         <div class="row">
          <div class="col-md-8">
