@@ -18,7 +18,7 @@ In order to run this on your local machine you must have the following installed
 * Setup the database by running `bundle exec rake db:{create,migrate}`
 * Next, run the command  `rake dev:seed`
 
-# Record Endpoints
+# Record Endpoints For BTC and ETH
 
 * `GET "avg_btc_open_monthly"`
 * `GET "avg_btc_open_yearly"`
@@ -30,14 +30,16 @@ In order to run this on your local machine you must have the following installed
 * `GET "avg_btc_close_yearly"`
 
 # APIs Used
-* Twitter API
-* CryptoCompare API
-* Twilio API
-* Coinbase/GDAX API
+* Twitter API for updates on pricing and new for BTC and ETH
+* CryptoCompare API for daily BTC and ETH updates
+* Twilio API for two-factor password reset and chat box
+* Coinbase/GDAX API for wallet and better live updates
+* St. Louis Fed Organization for Daily Nasdaq updates
 
 # To-Do
 * GDAX API redo- system was down during development
 * Twilio Chat Box for users to chat with each other on the platform.
+* Coinbase Wallet
 
 # Discussion/Feedback/Issues/Bugs
 For general discussion and questions, please use the Issues section on Github.
