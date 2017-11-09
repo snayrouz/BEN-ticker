@@ -42,6 +42,8 @@ In order to run this on your local machine you must have the following installed
 * Coinbase Wallet
 * Redesign tweet stream with Twitter cards
 * Using Google Charts API
+* Capture Twitter mentions for ETH and BTC to see if corelation between price and social activty.
+* Setup notifications if price hits certain low (use Twilio SMS notifications)
 
 
 # Discussion/Feedback/Issues/Bugs
