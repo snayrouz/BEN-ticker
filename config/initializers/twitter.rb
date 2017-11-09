@@ -1,10 +1,10 @@
 class TwitterApi
   def self.btc_tweet
-    client.user_timeline('BTCticker', exclude_replies: true, include_rts: false)
+    client.user_timeline('BTCticker', count: 5, exclude_replies: true, include_rts: false)
   end
 
   def self.eth_tweet
-    client.user_timeline('ETHPriceBot', exclude_replies: true, include_rts: false)
+    client.user_timeline('ETHPriceBot', count: 5, exclude_replies: true, include_rts: false)
   end
 
   def self.client

@@ -19,14 +19,18 @@
           <%= area_chart @currencies, refresh: 60 %><br>
 
           <ul>
-            <% TwitterApi.btc_tweet.each do |tweet| %>
-              <li><%= tweet.text %></li>
+            <% cache('btc_tweet', expires_in: 6.hours) do %>
+              <% TwitterApi.btc_tweet.each do |tweet| %>
+                <li><%= tweet.text %></li>
+              <% end %>
             <% end %>
           </ul>
 
           <ul>
-            <% TwitterApi.eth_tweet.each do |tweet| %>
+            <% cache('eth_tweet', expires_in: 6.hours) do %>
+              <% TwitterApi.eth_tweet.each do |tweet| %>
               <li><%= tweet.text %></li>
+              <% end %>
             <% end %>
           </ul>
 
