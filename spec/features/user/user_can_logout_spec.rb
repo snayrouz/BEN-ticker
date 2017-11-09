@@ -5,15 +5,16 @@ RSpec.describe "As a visitor I can login" do
 		user = User.create(first_name: "Tester",
                        last_name: "McTesty",
                        email: "testerson@testmail.com",
-                       password: "testing")
+                       password: "testing",
+											 username: "blah")
 
     visit '/'
 		click_on 'Login'
 
-    fill_in "session[email]", with: "testerson@testmail.com"
+    fill_in "session[username]", with: "blah"
 		fill_in "session[password]", with: "testing"
 
-		within(".action") do
+		within(".login") do
 			click_on("Login")
 		end
 
