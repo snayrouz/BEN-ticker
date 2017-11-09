@@ -1,28 +1,36 @@
 <%= render partial: 'layouts/navbar' %>
-  <div class="content-wrapper container">
-    <h1>Bitcoin Historical Data</h1>
-    <hr>
-    <h3>Average Open Price By Month</h3>
-      <%= column_chart charts_bitcoin_avg_btc_open_monthly_path %>
-    <hr>
-    <h3>Average Open Price By Year</h3>
-      <%= line_chart charts_bitcoin_avg_btc_open_yearly_path %>
-    <hr>
-    <h3>Average High Price By Month</h3>
-      <%= column_chart charts_bitcoin_avg_btc_high_monthly_path %>
-    <hr>
-    <h3>Average High Price By Year</h3>
-      <%= line_chart charts_bitcoin_avg_btc_high_yearly_path %>
-    <hr>
-    <h3>Average Low Price By Month</h3>
-      <%= column_chart charts_bitcoin_avg_btc_low_monthly_path %>
-    <hr>
-    <h3>Average Low Price By Year</h3>
-      <%= line_chart charts_bitcoin_avg_btc_low_yearly_path %>
-    <hr>
-    <h3>Average Closing Price By Month</h3>
-      <%= column_chart charts_bitcoin_avg_btc_close_monthly_path %>
-    <hr>
-    <h3>Average Closing Price By Year</h3>
-      <%= line_chart charts_bitcoin_avg_btc_close_yearly_path %>
-  </div>
+<div class="content-wrapper container">
+  <h1>Bitcoin Historical Data</h1>
+  <hr>
+  <% cache(charts_bitcoin_avg_btc_open_monthly_path, expires_in: 6.hours) do %>
+  <h3>Average Open Price By Month</h3>
+    <%= column_chart charts_bitcoin_avg_btc_open_monthly_path %>
+    <% end %>
+  <hr>
+  <h3>Average Open Price By Year</h3>
+    <%= line_chart charts_bitcoin_avg_btc_open_yearly_path %>
+  <hr>
+  <% cache(charts_bitcoin_avg_btc_high_monthly_path, expires_in: 6.hours) do %>
+  <h3>Average High Price By Month</h3>
+    <%= column_chart charts_bitcoin_avg_btc_high_monthly_path %>
+    <% end %>
+  <hr>
+  <h3>Average High Price By Year</h3>
+    <%= line_chart charts_bitcoin_avg_btc_high_yearly_path %>
+  <hr>
+  <% cache(charts_bitcoin_avg_btc_low_monthly_path, expires_in: 6.hours) do %>
+  <h3>Average Low Price By Month</h3>
+    <%= column_chart charts_bitcoin_avg_btc_low_monthly_path %>
+    <% end %>
+  <hr>
+  <h3>Average Low Price By Year</h3>
+    <%= line_chart charts_bitcoin_avg_btc_low_yearly_path %>
+  <hr>
+  <% cache(charts_bitcoin_avg_btc_close_monthly_path, expires_in: 6.hours) do %>
+  <h3>Average Closing Price By Month</h3>
+    <%= column_chart charts_bitcoin_avg_btc_close_monthly_path %>
+    <% end %>
+  <hr>
+  <h3>Average Closing Price By Year</h3>
+    <%= line_chart charts_bitcoin_avg_btc_close_yearly_path %>
+</div>
