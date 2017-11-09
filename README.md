@@ -40,7 +40,9 @@ In order to run this on your local machine you must have the following installed
 * GDAX API redo- system was down during development
 * Twilio Chat Box for users to chat with each other on the platform.
 * Coinbase Wallet
-* Redesign tweet stream
+* Redesign tweet stream with Twitter cards
+* Using Google Charts API
+
 
 # Discussion/Feedback/Issues/Bugs
 For general discussion and questions, please use the Issues section on Github.
