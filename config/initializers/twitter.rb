@@ -1,14 +1,21 @@
 class TwitterApi
   def self.btc_tweet
-    client.user_timeline('BTCticker', count: 5, exclude_replies: true, include_rts: false)
+    client.user_timeline('BTCticker', exclude_replies: true, include_rts: false)
   end
 
   def self.eth_tweet
-    client.user_timeline('ETHPriceBot', count: 5, exclude_replies: true, include_rts: false)
+    client.user_timeline('ETHPriceBot', exclude_replies: true, include_rts: false)
+  end
+
+  def self.topics
+    topics = ["bitcoin"]
+    client.filter(track: topics.join(",")) do |object|
+      puts object.text if object.is_a?(Twitter::Tweet)
+    end
   end
 
   def self.client
-    @client ||= Twitter::REST::Client.new do |config|
+    @client ||= Twitter::Streaming::Client.new do |config|
       config.consumer_key        = ENV['TWITTER_CONSUMER_KEY']
       config.consumer_secret     = ENV['TWITTER_CONSUMER_SECRET']
       config.access_token        = ENV['TWITTER_ACCESS_TOKEN']

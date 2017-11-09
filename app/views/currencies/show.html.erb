@@ -27,12 +27,13 @@
           </ul>
 
           <ul>
-            <% cache('eth_tweet', expires_in: 6.hours) do %>
+            <% cache('eth_tweet', expires_in: 3.hours) do %>
               <% TwitterApi.eth_tweet.each do |tweet| %>
-              <li><%= tweet.text %></li>
+                <li><%= tweet.text %></li>
               <% end %>
             <% end %>
           </ul>
+
 
           <div class="btn-toolbar" style="display: flex; margin-top: 15px;">
             <div style="margin: auto;">
