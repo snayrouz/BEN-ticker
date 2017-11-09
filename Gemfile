@@ -33,6 +33,7 @@ gem 'httparty'
 gem 'twilio-ruby' # for interacting with twilio
 gem 'envyable'
 gem 'will_paginate'
+gem 'twitter'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -43,6 +44,7 @@ group :development, :test do
   gem 'launchy'
   gem 'rails-controller-testing'
   gem 'database_cleaner'
+  gem 'dotenv-rails'
 end
 
 group :development do

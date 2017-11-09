@@ -18,6 +18,23 @@
 
           <%= area_chart @currencies, refresh: 60 %><br>
 
+          <ul>
+            <% cache('btc_tweet', expires_in: 6.hours) do %>
+              <% TwitterApi.btc_tweet.each do |tweet| %>
+                <li><%= tweet.text %></li>
+              <% end %>
+            <% end %>
+          </ul>
+
+          <ul>
+            <% cache('eth_tweet', expires_in: 3.hours) do %>
+              <% TwitterApi.eth_tweet.each do |tweet| %>
+                <li><%= tweet.text %></li>
+              <% end %>
+            <% end %>
+          </ul>
+
+
           <div class="btn-toolbar" style="display: flex; margin-top: 15px;">
             <div style="margin: auto;">
               <%= link_to 'Bitcoin', currency_path('Bitcoin'), class:"btn btn-link" %>
