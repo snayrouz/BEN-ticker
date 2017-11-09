@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get '/password-confirmation', to: 'confirmations#new', as: 'new_password'
   post '/password-confirmation', to: 'passwords#update', as: 'edit_password'
 
-  post 'tokens' => "tokens#create"
+  post '/tokens' => "tokens#create"
 
   resources :users, only: [:new, :create, :edit, :update]
 
