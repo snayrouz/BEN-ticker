@@ -75,14 +75,15 @@
             </div>
           </div>
           <hr>
-      <div class="container-fluid">
-        <div class="row">
-         <div class="col-md-8">
-           <div id="messages"></div>
-           <input id="chat-input" class="form-control" type="text" placeholder="Start chatting..." autofocus/>
-         </div>
-        </div>
-      </div>
+          <h1>TikTalk Chatroom:</h1>
+        <section>
+        <div id="messages"></div>
+          <input id="chat-input" type="text" placeholder="say anything" autofocus/>
+        </section>
+
+        <script src="https://media.twiliocdn.com/sdk/js/chat/v1.0/twilio-chat.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="index.js"></script>
       <!-- Blank div to give the page height to preview the fixed vs. static navbar-->
       <div style="height: 1000px;"></div>
     </div>
@@ -93,28 +94,4 @@
     <a class="scroll-to-top rounded" href="#page-top">
       <i class="fa fa-angle-up"></i>
     </a>
-    <!-- Logout Modal-->
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin.min.js"></script>
-    <!-- Custom scripts for this page-->
-    <!-- Toggle between fixed and static navbar-->
-    <script>
-    $('#toggleNavPosition').click(function() {
-      $('body').toggleClass('fixed-nav');
-      $('nav').toggleClass('fixed-top static-top');
-    });
-    </script>
-    <!-- Toggle between dark and light navbar-->
-    <script>
-    $('#toggleNavColor').click(function() {
-      $('nav').toggleClass('navbar-dark navbar-light');
-      $('nav').toggleClass('bg-dark bg-light');
-      $('body').toggleClass('bg-dark bg-light');
-    });
-    </script>
 </div>

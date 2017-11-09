@@ -1,7 +1,6 @@
 @import "bootstrap";
-@import "images";
-@import "navbar";
 @import "card";
+@import "currencies";
 
 html {
 
@@ -54,7 +53,7 @@ html {
 html {
   position: relative;
   min-height: 100%;
-  background-color: #000000; 
+  background-color: #000000;
 }
 
 body {
