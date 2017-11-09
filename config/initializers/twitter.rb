@@ -1,17 +1,18 @@
 class TwitterApi
-  def self.btc_tweet
+  def self.btc_price_tweet
     client.user_timeline('BTCticker', exclude_replies: true, include_rts: false)
   end
 
-  def self.eth_tweet
+  def self.eth_price_tweet
     client.user_timeline('ETHPriceBot', exclude_replies: true, include_rts: false)
   end
 
-  def self.topics
-    topics = ["bitcoin"]
-    client.filter(track: topics.join(",")) do |object|
-      puts object.text if object.is_a?(Twitter::Tweet)
-    end
+  def self.btc_news
+    client.user_timeline('BTCTN', count: 5, exclude_replies: true, include_rts: false)
+  end
+
+  def self.eth_news
+    client.user_timeline('eth_classic', count: 5, exclude_replies: true, include_rts: false)
   end
 
   def self.client
