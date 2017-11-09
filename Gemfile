@@ -34,6 +34,7 @@ gem 'twilio-ruby' # for interacting with twilio
 gem 'envyable'
 gem 'will_paginate'
 gem 'twitter'
+gem 'coinbase-exchange'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
