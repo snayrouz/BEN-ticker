@@ -389,3 +389,7 @@ footer.sticky-footer {
 @media (min-width: 992px) {
   body.sidenav-toggled footer.sticky-footer {
     width: calc(100% - 55px); } }
+
+.col{
+  outline:solid 1px rgba(000,000,000,0.5);
+}
