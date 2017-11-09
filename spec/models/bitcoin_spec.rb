@@ -27,4 +27,11 @@ RSpec.describe Bitcoin, type: :model do
       expect(btc).to be_invalid
     end
   end
+
+  context "valid attributes" do
+    it "is valid with all attributes" do
+      btc = Bitcoin.create(date: "Nov 07, 2017",open: 0.70231e4, high: 0.725332e4, low: 0.70231e4, close: 0.714438e4)
+      expect(btc).to be_valid
+    end
+  end
 end

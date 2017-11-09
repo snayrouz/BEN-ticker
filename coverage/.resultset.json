@@ -135,14 +135,6 @@
         null,
         null
       ],
-      "/Users/samuelnayrouz/Desktop/mod3/BEN ticker/config/initializers/coinbase.rb": [
-        1,
-        1,
-        0,
-        null,
-        null,
-        null
-      ],
       "/Users/samuelnayrouz/Desktop/mod3/BEN ticker/config/initializers/cookies_serializer.rb": [
         null,
         null,
@@ -532,24 +524,24 @@
       "/Users/samuelnayrouz/Desktop/mod3/BEN ticker/app/models/code_generator.rb": [
         1,
         1,
-        0,
+        2,
         null,
         null
       ],
       "/Users/samuelnayrouz/Desktop/mod3/BEN ticker/app/models/message_sender.rb": [
         1,
         1,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
         null,
-        0,
-        null,
-        null,
+        1,
         null,
         null,
         null,
-        0,
+        null,
+        null,
+        1,
         null,
         null,
         null
@@ -640,13 +632,13 @@
       "/Users/samuelnayrouz/Desktop/mod3/BEN ticker/app/models/confirmation_sender.rb": [
         1,
         1,
+        2,
+        2,
         1,
-        1,
-        0,
         null,
         null
       ]
     },
-    "timestamp": 1510232776
+    "timestamp": 1510235872
   }
 }
