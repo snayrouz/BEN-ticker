@@ -44,6 +44,7 @@ group :development, :test do
   gem 'launchy'
   gem 'rails-controller-testing'
   gem 'database_cleaner'
+  gem 'dotenv-rails'
 end
 
 group :development do
