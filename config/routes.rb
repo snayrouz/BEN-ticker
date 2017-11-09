@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get '/login', :to => 'sessions#new', :as => 'login'
   post '/login', :to => 'sessions#create'
-  delete '/logout', to: 'sessions#destroy'
+  get '/logout', to: 'sessions#destroy'
 
   get '/password-reset', to: 'passwords#new', as: 'new_password_reset'
   post '/password-reset', to: 'passwords#create', as: 'password_reset'
